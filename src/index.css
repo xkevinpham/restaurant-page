@@ -1,0 +1,14 @@
+
+
+#menu {
+    text-align: start;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+#tabs {
+    background-color: white;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+}

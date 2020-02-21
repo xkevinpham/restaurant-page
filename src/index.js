@@ -1,14 +1,34 @@
-import {home} from './modules/home.js'
-import {menu} from './modules/menu.js'
-import {contact} from './modules/contact.js'
+import {homeTab} from './modules/home.js'
+import {menu, menuTab} from './modules/menu.js'
+import {contact, contactTab} from './modules/contact.js'
+import style from "./index.css";
 
 
-const homeTab = document.querySelector('.home');
-    homeTab.addEventListener('click', home);
+//Reset text to add in new texts
+const clear = () => {
+    let contentDiv = document.querySelector('#content');
+    contentDiv.innerHTML('');
+};
 
-const menuTab = document.querySelector('.menu');
-    menuTab.addEventListener('click', menu);
+document.addEventListener("DOMContentLoaded", () => {
+    loadStyle();
+    navBar();
+})
 
-const contactTab = document.querySelector('.contact');
-    contactTab.addEventListener('click', contact);
-    
+const menu = document.querySelector('#menu')
+menu.addEventListener('click', () =>{
+    clear();
+    menuTab();
+});
+
+const home = document.querySelector('#home')
+home.addEventListener('click', ()=> {
+    clear();
+    homeTab();
+});
+
+const contact = document.querySelector('#contact')
+contact.addEventListener('click', ()=> {
+    clear();
+    contactTab();
+})
