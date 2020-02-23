@@ -1,6 +1,8 @@
+import _ from 'lodash';
 import {homeTab} from './modules/home.js'
 import {menu, menuTab} from './modules/menu.js'
 import {contact, contactTab} from './modules/contact.js'
+import {topNav} from './modules/topNav.js'
 import style from "./index.css";
 
 
@@ -12,13 +14,7 @@ const clear = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     loadStyle();
-    navBar();
-})
-
-const menu = document.querySelector('#menu')
-menu.addEventListener('click', () =>{
-    clear();
-    menuTab();
+    topNav();
 });
 
 const home = document.querySelector('#home')
@@ -27,8 +23,14 @@ home.addEventListener('click', ()=> {
     homeTab();
 });
 
-const contact = document.querySelector('#contact')
-contact.addEventListener('click', ()=> {
+const menu = document.querySelector('#menu')
+menu.addEventListener('click', () =>{
     clear();
-    contactTab();
-})
+    menuTab();
+});
+
+// const contact = document.querySelector('#contact')
+// contact.addEventListener('click', ()=> {
+//     clear();
+//     contactTab();
+// })

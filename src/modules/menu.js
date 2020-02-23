@@ -1,7 +1,8 @@
 const menuTab = () => {
-    const menuDiv = document.createElement('div');
+    const menuDiv = document.createElement('#content');
     menuDiv.id = 'menu';
-    const menu = document.createElement('ul');
+    const menu = document.createElement('h1');
+    menu.textContent = 'Menu'
 
     const coffee5 = document.createElement('li');
         coffee5.textContent = 'Arabica coffee roasted for 5 hours'
