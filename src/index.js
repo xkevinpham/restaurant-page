@@ -1,36 +1,40 @@
 import _ from 'lodash';
-import {homeTab} from './modules/home.js'
-import {menu, menuTab} from './modules/menu.js'
-import {contact, contactTab} from './modules/contact.js'
-import {topNav} from './modules/topNav.js'
-import style from "./index.css";
+import {homeTab} from './src/home';
+import {createNavBar} from './src/navbar'
+import {menuTab} from './src/menu'
+import {createAbout} from './src/about'
+import {createStyle} from './src/createStyle'
 
 
-//Reset text to add in new texts
-const clear = () => {
-    let contentDiv = document.querySelector('#content');
-    contentDiv.innerHTML('');
-};
+//-clears Output
+function clear(){
+    let contentDiv = document.querySelector("#content")    
+    contentDiv.innerHTML=""}
 
+///------------
 document.addEventListener("DOMContentLoaded", () => {
-    loadStyle();
-    topNav();
-});
+createStyle()
+createNavBar()
 
-const home = document.querySelector('#home')
-home.addEventListener('click', ()=> {
-    clear();
-    homeTab();
-});
+const logo = document.querySelector(".logo")
+logo.addEventListener("click", clear)
 
-const menu = document.querySelector('#menu')
-menu.addEventListener('click', () =>{
-    clear();
-    menuTab();
-});
+//when clicking "services" will return the page
+const services = document.querySelector("#home")
+services.addEventListener("click", () => {
+    clear()
+    homeTab()
+})
+//when clicking projects will return its page
+const projects = document.querySelector("#projects")
+projects.addEventListener("click", () => {
+    clear()
+    menuTab()
+})
 
-// const contact = document.querySelector('#contact')
-// contact.addEventListener('click', ()=> {
-//     clear();
-//     contactTab();
-// })
+const about = document.querySelector("#about")
+about.addEventListener("click", () => {
+    clear()
+    createAbout()
+})
+});

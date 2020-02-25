@@ -1,10 +1,7 @@
-const topNav = () =>{
+  
+function createNavBar(){    
     let header = document.createElement("header")
     
-    let logo = document.createElement("img")
-    logo.className = "logo"
-    logo.src = "logo5.png"
-    logo.alt = "logo"
     
     let nav = document.createElement("nav")
     
@@ -31,8 +28,6 @@ const topNav = () =>{
     
     header.appendChild(contactButton)
     document.querySelector("body").prepend(header)
-
-
 }
 
-export {topNav}
+export {createNavBar}
