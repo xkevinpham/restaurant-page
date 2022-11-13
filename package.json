@@ -22,7 +22,7 @@
   "homepage": "https://github.com/xkevinpham/restaurant-page#readme",
   "devDependencies": {
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "lodash": "^4.17.15"
